@@ -1,0 +1,144 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #1f2937;
+  background: #f3f6fb;
+}
+
+a {
+  color: #155eef;
+  text-decoration: none;
+}
+
+.site-header {
+  background: #14213d;
+  color: white;
+  padding: 18px 6%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.brand {
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.site-header nav {
+  display: flex;
+  gap: 20px;
+}
+
+.site-header nav a {
+  color: white;
+}
+
+.container {
+  max-width: 1100px;
+  min-height: 75vh;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+h2 {
+  color: #14213d;
+}
+
+.internship-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  margin-top: 22px;
+}
+
+.internship-card,
+.details-card,
+.form-card {
+  background: white;
+  border: 1px solid #e0e6ef;
+  border-radius: 12px;
+  padding: 22px;
+  box-shadow: 0 4px 14px rgba(20, 33, 61, 0.06);
+}
+
+.internship-card h3 {
+  margin-top: 0;
+  color: #155eef;
+}
+
+.button-link,
+button {
+  display: inline-block;
+  border: 0;
+  border-radius: 7px;
+  padding: 11px 16px;
+  margin-top: 12px;
+  color: white;
+  background: #155eef;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.button-link:hover,
+button:hover {
+  background: #1249ba;
+}
+
+.form-card {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 7px;
+  font-size: 15px;
+}
+
+.success-message,
+.error-message {
+  padding: 12px;
+  border-radius: 7px;
+  overflow-wrap: anywhere;
+}
+
+.success-message {
+  color: #166534;
+  background: #dcfce7;
+}
+
+.error-message {
+  color: #991b1b;
+  background: #fee2e2;
+}
+
+.site-footer {
+  text-align: center;
+  padding: 22px;
+  background: #14213d;
+  color: white;
+}
+
+@media (max-width: 600px) {
+  .site-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
