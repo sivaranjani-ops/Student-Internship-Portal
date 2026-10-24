@@ -1,39 +1,154 @@
-## React
+# Student Internship Portal
 
-This is a simple React application. This application serves as a basic template for a react applications.  
-This project is bootstrapped with [Vite](https://vitejs.dev/guide/).
+A web application that allows students to explore internship opportunities and submit applications online.
 
-## How to run
+## Live Demo
 
-1. Before running the application, make sure all dependencies are installed. To install dependencies, run following command in terminal:
+- **Frontend:** https://student-internship-portal-pearl.vercel.app/
+- **Backend API:** https://student-internship-portal-1.onrender.com
 
-   ```sh
-   npm install
-   ```
+## Technologies Used
 
-2. Once dependencies are installed, run the following command to start the application:
+### Frontend
+- React
+- Vite
+- React Router
+- CSS
+- Fetch API for backend communication
 
-   ```sh
-   npm run dev
-   ```
+### Backend
+- Node.js
+- Express.js
+- REST API
+- MongoDB Atlas
+- Mongoose
+- Environment variables for configuration
 
-3. Refresh the URL in simple browser to see the output.
+## Features
 
-## FAQs & Debugging
+- Home page introducing the portal
+- Internship listings with internship titles, company names, durations, and descriptions
+- Application form for students
+- Backend API integration
+- Application data stored in MongoDB Atlas
+- Navigation between pages using React Router
+- Separate frontend and backend deployments
 
-### 1. I do not see browser in my workspace
+## Project Structure
 
-Studio will automatically open the app in a new browser tab. If not, you can use the following steps to open the simple browser
+```text
+student-internship-portal/
+├── src/
+│   ├── pages/
+│   │   ├── Home.jsx
+│   │   ├── Internships.jsx
+│   │   └── Apply.jsx
+│   ├── App.jsx
+│   └── App.css
+├── server/
+│   ├── server.js
+│   └── package.json
+├── .gitignore
+├── package.json
+└── README.md
+```
 
-1. From VS Code command pallette(`Ctrl/Cmd + Shift + P`), run **Studio Manager: SimpleBrowser Default URL** command. This will open the app in a new browser tab.
+## Getting Started
 
-2. Your app runs on hosted env which can be accessed using host id, port provided in file **.vscode/.studio/studio-env.json**. Use values to create the URL as follows:
-   `https://<STUDIO_HOST_ID>-3000.<STUDIO_DOMAIN>`
+### Prerequisites
 
-### 2. Getting `vite: not found` error
+- Node.js and npm
+- A MongoDB Atlas account
+- Git
 
-This means node_modules are missing in your workspace, please refer the 'How to run' section and make sure you have followed the steps in sequence
+### 1. Clone the repository
 
-### 3. Can I use create-react-app instead Vite?
+```bash
+git clone https://github.com/VidhyaVarshinicodespace/student-internship-portal.git
+cd student-internship-portal
+```
 
-Yes, you can use create-react-app instead Vite, the default workspace is loaded with Vite setup, you can remove the Vite dependencies, add create-react-app dependencies and update the scripts to start using create-react-app.
+### 2. Install frontend dependencies
+
+```bash
+npm install
+```
+
+Create a `.env` file in the project root:
+
+```env
+VITE_API_URL=http://localhost:5000
+```
+
+### 3. Configure the backend
+
+```bash
+cd server
+npm install
+```
+
+Create a `server/.env` file containing your MongoDB connection string:
+
+```env
+MONGODB_URI=your_mongodb_connection_string
+```
+
+Never commit `.env` files or expose database credentials.
+
+### 4. Start the backend
+
+From the `server` directory, run:
+
+```bash
+node server.js
+```
+
+### 5. Start the frontend
+
+Open another terminal in the project root and run:
+
+```bash
+npm run dev
+```
+
+Open the local URL displayed by Vite.
+
+## API Endpoints
+
+| Method | Endpoint | Purpose |
+|---|---|---|
+| GET | `/` | Check backend status |
+| GET | `/api/internships` | Retrieve internship listings |
+| POST | `/api/applications` | Submit an internship application |
+| GET | `/api/applications` | Retrieve submitted applications |
+
+## Database
+
+MongoDB Atlas stores submitted internship applications. Mongoose is used to interact with the database.
+
+## Deployment
+
+- **Frontend:** Vercel
+- **Backend:** Render
+- **Database:** MongoDB Atlas
+
+The frontend uses the `VITE_API_URL` environment variable to communicate with the backend.
+
+## Security
+
+- Store database credentials in environment variables.
+- Keep `.env` files out of version control.
+- Use appropriate MongoDB Network Access restrictions.
+- Validate application data on the backend.
+
+## Future Enhancements
+
+- Student login and authentication
+- Search and filter internship opportunities
+- Application status tracking
+- Admin dashboard for managing internships
+- Student profile management
+
+## Author
+
+Student Internship Portal — developed as a web application project.
