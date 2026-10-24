@@ -1,0 +1,86 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f3f6fb;
+  color: #1e293b;
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 24px;
+}
+
+header {
+  background: #173b70;
+  color: white;
+  padding: 28px;
+  border-radius: 12px;
+  margin-bottom: 28px;
+}
+
+header h1 {
+  margin-top: 0;
+}
+
+.internship-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.internship-card,
+.details,
+.application {
+  background: white;
+  padding: 20px;
+  margin-bottom: 22px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px #00000010;
+}
+
+button {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 11px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #1d4ed8;
+}
+
+form {
+  display: grid;
+  gap: 10px;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 11px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+h2 {
+  color: #173b70;
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 14px;
+  }
+
+  header {
+    padding: 20px;
+  }
+}
