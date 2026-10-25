@@ -5,7 +5,7 @@ import internships from "../data/internships";
 
 const API_URL = (
   import.meta.env.VITE_API_URL ||
-  "https://3bf5559310c5-0af40515-5300.ws6.app/proxy/5000/api"
+  "https://student-internship-portal-3rfi.onrender.com/api"
 ).replace(/\/+$/, "");
 
 function Apply() {
