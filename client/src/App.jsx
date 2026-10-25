@@ -7,7 +7,7 @@ import "./App.css";
 
 function App() {
   return (
-    <BrowserRouter basename="/proxy/4173">
+    <BrowserRouter basename={import.meta.env.BASE_URL.replace(/\/$/, "")}>
       <header className="site-header">
         <Link className="brand" to="/">Student Internship Portal</Link>
         <nav>
