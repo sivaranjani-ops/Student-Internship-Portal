@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 const API_URL = (
-  import.meta.env.VITE_API_URL || "http://localhost:5000/api"
+  import.meta.env.VITE_API_URL || "https://student-internship-portal-3rfi.onrender.com/api"
 ).replace(/\/+$/, "");
 
 function Applications() {
