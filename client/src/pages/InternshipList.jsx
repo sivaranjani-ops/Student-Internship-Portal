@@ -1,26 +1,3 @@
-import { Link } from "react-router-dom";
-import internships from "../data/internships";
-
-function InternshipList() {
-  return (
-    <section>
-      <h2>Available Internships</h2>
-      <div className="internship-grid">
-        {internships.map((item) => (
-          <article className="internship-card" key={item.id}>
-            <h3>{item.title}</h3>
-            <p>Company: {item.company}</p>
-            <p>Location: {item.location}</p>
-            <p>Duration: {item.duration}</p>
-            <p>Stipend: {item.stipend}</p>
-            <Link className="button-link" to={`/internships/${item.id}`}>
-              View Details
-            </Link>
-          </article>
-        ))}
-      </div>
-    </section>
-  );
-}
-
-export default InternshipList;
+import {Link} from "react-router-dom";
+import internships from "../data/internships.js";
+export default function InternshipList(){return <><section className="hero"><p className="eyebrow">YOUR NEXT CHAPTER STARTS HERE</p><h1>Find an internship that moves you forward.</h1><p>Explore opportunities, build practical skills, and take the first step toward a career you are excited about.</p><div className="hero-actions"><Link className="primary-link" to="/apply">Apply now →</Link><a className="secondary-link" href="#opportunities">Explore opportunities</a></div></section><section id="opportunities"><div className="section-heading"><div><h2>Featured opportunities</h2><p>Choose a role that matches your interests and skills.</p></div><span className="result-count">{internships.length} opportunities</span></div><div className="internship-grid">{internships.map(item=><article className="internship-card" key={item.id}><span className="card-tag">INTERNSHIP</span><h3>{item.title}</h3><p className="company">{item.company}</p><p className="card-description">{item.description}</p><div className="card-meta"><span>⌖ {item.location}</span><span>◷ {item.duration}</span><span>₹ {item.stipend}</span></div><Link className="button-link" to={"/internships/"+item.id}>View details →</Link></article>)}</div></section></>}
